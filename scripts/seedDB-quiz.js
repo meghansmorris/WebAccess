@@ -32,6 +32,28 @@ const quizSeed = [
     category: "Perceivable",
     thumbnail: ""
   },
+  {
+    question: "What considerations for keyboard navigation should be included in an accessible web application?",
+    answers: {
+      ans1: "All page functionality is available using the keyboard.",
+      ans2: "At least 75% page functionality is available using a keyboard, but other functionality is locked.",
+      ans3: "Page functionality can be made available at timed intervals as long as it's intuitive for the user."
+    },
+    correctAns: "ans1",
+    category: "Operable",
+    thumbnail: ""
+  },
+  {
+    question: "Why is an important consideration for form design?",
+    answers: {
+      ans1: "Without specific instructions for how to use the form, it isn't accessible to all users.",
+      ans2: "As long as the form is navigable using the keyboard, all users can complete it.",
+      ans3: "If a form isn't labeled descriptively, it might be impossible for a user to know what type of content is required in an input field."
+    },
+    correctAns: "ans3",
+    category: "Operable",
+    thumbnail: ""
+  },
 
 ]
 
