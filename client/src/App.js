@@ -6,6 +6,7 @@ import TakeQuiz from "./pages/TakeQuiz"
 import Resources from "./pages/Resources"
 import NoMatch from "./pages/NoMatch";
 import NavBar from "./components/NavBar/NavBar";
+import Footer from "./components/Footer/Footer";
 
 
 
@@ -22,6 +23,7 @@ function App() {
           <Route exact path="/resources" component={Resources} />
           <Route component={NoMatch} />
         </Switch>
+        <Footer />
       </>
     </Router>
   );
