@@ -6,8 +6,9 @@ mongoose.Promise = global.Promise;
 
 mongoose.connect(
   process.env.MONGODB_URI ||
-  "mongodb://localhost/webaccess"
+  "mongodb://localhost/webaccess", { useNewUrlParser: true }
 );
+
 
 const quizSeed = [
   {
@@ -58,7 +59,7 @@ const quizSeed = [
 ]
 
 db.Quiz
-  .remove({})
+  .deleteMany({})
   .then(() => db.Quiz.collection.insertMany(quizSeed))
   .then(data => {
     console.log(data.result.n + " records inserted!");

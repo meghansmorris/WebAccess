@@ -6,8 +6,9 @@ mongoose.Promise = global.Promise;
 
 mongoose.connect(
   process.env.MONGODB_URI ||
-  "mongodb://localhost/webaccess"
+  "mongodb://localhost/webaccess", { useNewUrlParser: true }
 );
+
 
 const cardSeed = [
   {
@@ -20,7 +21,7 @@ const cardSeed = [
 ]
 
 db.Card
-  .remove({})
+  .deleteMany({})
   .then(() => db.Card.collection.insertMany(cardSeed))
   .then(data => {
     console.log(data.result.n + " records inserted!");
