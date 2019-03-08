@@ -1,6 +1,6 @@
 import React from "react";
 import HomeHeader from "../components/HomeHeader/HomeHeader";
-import { MDBCol, MDBRow, MDBContainer } from "mdbreact";
+import { MDBCol, MDBRow, MDBContainer, MDBIcon, MDBBtn } from "mdbreact";
 
 function Landing() {
     return (
@@ -18,6 +18,31 @@ function Landing() {
                 <MDBCol md="8">
                     <p className="px-4 py-1">To ensure web applications enable everyone to use them effectively and without frustration, web accessibility standards must be considered. That's where we come in! Our learning site provides resources and learning for developers to ensure their sites can be used by all. </p>
                     <p className="px-4 py-1">As you work through our learning portal, join the conversation to ask questions, provide ideas and add answers for other developers working to improve their web accessibility standards. We look forward to engaging with you!</p>
+                </MDBCol>
+            </MDBRow>
+            <MDBRow>
+                <MDBCol md="4"></MDBCol>
+                <MDBCol md="6">
+                    <span>                        
+                        <a href="/community" className="pl-1 mr-5">
+                            <MDBIcon far icon="comments" size="4x" className="grey-text pr-3" alt="join the conversation" />
+                        </a>
+                        <a href="/learn" className="mr-5">
+                            <MDBIcon fas icon="puzzle-piece" size="4x" className="grey-text pr-3" alt="learn" />
+                        </a>
+                        <a href="/quiz" className="mr-4">
+                            <MDBIcon fas icon="question" size="4x" className="grey-text pr-3" alt="take a quiz" />
+                        </a>
+                    </span>
+                </MDBCol>
+            </MDBRow>
+            <MDBRow>
+                <MDBCol md="2"></MDBCol>
+                <MDBCol md="9">
+                    <form className="form-inline mt-4 mb-4">
+                        <MDBIcon icon="search" size="2x" className="grey-text" alt="search" />
+                        <input className="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search the site" aria-label="Search the site" />
+                    </form>
                 </MDBCol>
             </MDBRow>
         </MDBContainer>

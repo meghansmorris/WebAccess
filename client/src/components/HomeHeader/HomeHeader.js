@@ -1,5 +1,5 @@
 import React from "react";
-import {  MDBRow, MDBCol, MDBCard, MDBContainer } from "mdbreact";
+import {  MDBRow, MDBCol, MDBCard } from "mdbreact";
 
 const HomeHeader = () => {
   return (
