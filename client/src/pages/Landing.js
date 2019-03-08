@@ -1,6 +1,7 @@
 import React from "react";
 import HomeHeader from "../components/HomeHeader/HomeHeader";
-import { MDBCol, MDBRow, MDBContainer, MDBIcon, MDBBtn } from "mdbreact";
+import SiteSearch from "../components/SiteSearch/SiteSearch";
+import { MDBCol, MDBRow, MDBContainer, MDBIcon } from "mdbreact";
 
 function Landing() {
     return (
@@ -37,12 +38,9 @@ function Landing() {
                 </MDBCol>
             </MDBRow>
             <MDBRow>
-                <MDBCol md="2"></MDBCol>
-                <MDBCol md="9">
-                    <form className="form-inline mt-4 mb-4">
-                        <MDBIcon icon="search" size="2x" className="grey-text" alt="search" />
-                        <input className="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search the site" aria-label="Search the site" />
-                    </form>
+                <MDBCol md="1"></MDBCol>
+                <MDBCol md="9" className="ml-3">
+                    <SiteSearch />
                 </MDBCol>
             </MDBRow>
         </MDBContainer>

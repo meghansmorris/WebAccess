@@ -12,7 +12,7 @@ const HomeHeader = () => {
                 }}>
             <div className="text-white text-center d-flex rgba-black-strong py-5 px-5">
               <div>
-                <h1 className="py-3 font-weight-bold">
+                <h1 className=" display-2 py-3 font-weight-bold">
                   <strong>Welcome!</strong>
                 </h1>
                 <h2 className="py-3 px-2">
