@@ -13,7 +13,7 @@ function Learn() {
                 <hr className="my-2" />
                 <h2 className="lead">Flip through the flashcards to test your knowledge.</h2>
             </Header>
-            <Flashcard></Flashcard>
+            <Flashcard />
         </MDBContainer>
         );
 
