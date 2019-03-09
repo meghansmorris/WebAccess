@@ -5,17 +5,18 @@ class Learn extends Component {
 
   state = {
       question: "",
-      answer: "",
+      answers: "",
+      correctAns: "",
       category: "",
       thumbnails: []
   }
 
   componentDidMount() {
-    this.loadCard();
+    this.loadQuiz();
   }
 
-  loadCard = () => {
-      API.getCards()
+  loadQuiz = () => {
+      API.getQuiz()
         .then(res => console.log(res))
   }
 

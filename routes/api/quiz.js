@@ -1,8 +1,8 @@
 const router = require("express").Router();
-const flashcardController = require("../../controllers/flashcardController");
+const quizController = require("../../controllers/quizController");
 
-router.route("/api/cards")
-    .get(flashcardController.findAll);
+router.route("/")
+    .get(quizController.findAll);
 
 
 
