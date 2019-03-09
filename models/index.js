@@ -1,5 +1,6 @@
 module.exports = {
     Card: require("./card.js"),
     Quiz: require("./quiz"),
-    User: require("./user")
+    User: require("./user"),
+    Comment: require("./comments")
 };

@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import API from "../utils/API";
+import Header from "../components/Header/Header";
+import { MDBContainer } from "mdbreact";
 
 class Learn extends Component {
 
@@ -22,7 +24,13 @@ class Learn extends Component {
 
 render() {
     return (
-        <h1>We will display flashcards here.</h1>
+        <MDBContainer fluid>
+            <Header>
+                <h1 className="display-3">Learn About Web Accessibility</h1>
+                <hr className="my-2" />
+                <h2 className="lead">Flip through the flashcards to test your knowledge.</h2>
+            </Header>
+        </MDBContainer>
         );
 
     }
