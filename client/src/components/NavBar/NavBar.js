@@ -14,7 +14,7 @@ render() {
   return (
     <MDBNavbar color="teal darken-4" dark expand="md">
       <MDBNavbarBrand>
-        <strong className="white-text">Project3</strong>
+        <strong className="white-text">Enabled Web Learning</strong>
       </MDBNavbarBrand>
       <MDBNavbarToggler onClick={this.toggleCollapse} />
       <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
@@ -30,6 +30,9 @@ render() {
           </MDBNavItem>
           <MDBNavItem>
             <MDBNavLink to="/resources">Resources</MDBNavLink>
+          </MDBNavItem>
+          <MDBNavItem>
+            <MDBNavLink to="/community">Community</MDBNavLink>
           </MDBNavItem>
         </MDBNavbarNav>
         <MDBNavbarNav right>

@@ -1,14 +1,14 @@
 import React from "react";
-import { MDBJumbotron, MDBContainer } from "mdbreact";
+import {  MDBJumbotron } from "mdbreact";
 
-const Header = () => {
-  return (
-    <MDBJumbotron fluid>
-      <MDBContainer>
-        <h1 className="display-4">Welcome</h1>
-      </MDBContainer>
-    </MDBJumbotron>
-  )
-}
+function Header({ children }) {
+    return (
+      <MDBJumbotron>
+           {children}
+      </MDBJumbotron>
+       
+    );
+  }
+
 
 export default Header;
