@@ -1,27 +1,11 @@
-import React, { Component } from "react";
-import API from "../utils/API";
+import React from "react";
 import Header from "../components/Header/Header";
 import { MDBContainer } from "mdbreact";
+import Flashcard from "../components/Flashcard/Flashcard";
 
-class Learn extends Component {
+function Learn() {
 
-    state = {
-        question: "",
-        answer: "",
-        category: "",
-        thumbnails: []
-    }
 
-  componentDidMount() {
-    this.loadCard();
-  }
-
-  loadCard = () => {
-      API.getCards()
-        .then(res => console.log(res))
-  }
-
-render() {
     return (
         <MDBContainer fluid>
             <Header>
@@ -29,9 +13,10 @@ render() {
                 <hr className="my-2" />
                 <h2 className="lead">Flip through the flashcards to test your knowledge.</h2>
             </Header>
+            <Flashcard></Flashcard>
         </MDBContainer>
         );
 
-    }
+    
 }
 export default Learn;
