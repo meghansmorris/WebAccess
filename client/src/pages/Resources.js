@@ -1,10 +1,7 @@
 import React from "react";
-<<<<<<< HEAD
-=======
 import Header from "../components/Header/Header";
 import SiteSearch from "../components/SiteSearch/SiteSearch";
 import { MDBContainer } from "mdbreact";
->>>>>>> b597742244e3256b64173fbdeaa4636eb8b0a83b
 
 function Resources() {
     return (

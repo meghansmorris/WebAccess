@@ -5,20 +5,19 @@ import { MDBContainer } from "mdbreact";
 
 class Learn extends Component {
 
-  state = {
-      question: "",
-      answers: "",
-      correctAns: "",
-      category: "",
-      thumbnails: []
-  }
+    state = {
+        question: "",
+        answer: "",
+        category: "",
+        thumbnails: []
+    }
 
   componentDidMount() {
-    this.loadQuiz();
+    this.loadCard();
   }
 
-  loadQuiz = () => {
-      API.getQuiz()
+  loadCard = () => {
+      API.getCards()
         .then(res => console.log(res))
   }
 
