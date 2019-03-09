@@ -7,19 +7,13 @@ import ReactCardFlip from 'react-card-flip';
 
 class Flashcard extends Component {
 
-    // state = {
-    //     question: "",
-    //     answer: "",
-    //     category: "",
-    //     thumbnails: []
-    // }
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             isFlipped: false,
-            question: "",
-            answer: "",
-            category: "",
+            question: "Question Here",
+            answer: "Answer Here",
+            category: "This is the Category",
             thumbnails: []
         };
         this.handleClick = this.handleClick.bind(this);
@@ -32,8 +26,9 @@ class Flashcard extends Component {
     loadCard = () => {
         API.getCards()
             .then(res => 
+                this.setState({ question: res.data[0].question, answer: res.data[0].answer, category: res.data[0].category})
+                // console.log(`question: ${res.data[0].question}, answer: ${res.data[0].answer}, category: ${res.data[0].category}`)
                 
-                this.setState({ question: res.data.question, answer: res.data.answer, category: res.data.category})
             )
             .catch(err => console.log(err));
     }
@@ -56,23 +51,23 @@ class Flashcard extends Component {
                 <MDBCard style={{ width: "22rem" }} key="front">
                     <MDBCardImage className="img-fluid" src="https://mdbootstrap.com/img/Photos/Others/images/43.jpg" waves />
                     <MDBCardBody>
-                        <MDBCardTitle>{this.state.category}</MDBCardTitle>
+                        <MDBCardTitle>
+                            Category: {this.state.category}</MDBCardTitle>
                         <MDBCardText>
                             {this.state.question}
-                    </MDBCardText>
-                    <button onClick={this.handleClick}>Click to flip</button>
+                        </MDBCardText>
+                        <button onClick={this.handleClick}>Click to flip</button>
                     </MDBCardBody>
                 </MDBCard>
 
                 <MDBCard style={{ width: "22rem" }} key="back">
                     <MDBCardImage className="img-fluid" src="https://mdbootstrap.com/img/Photos/Others/images/43.jpg" waves />
                     <MDBCardBody>
-                        <MDBCardTitle>Card title</MDBCardTitle>
+                        <MDBCardTitle>Category: {this.state.category}</MDBCardTitle>
                         <MDBCardText>
-                            Some quick example text to build on the card title and make
-                            up the bulk of the card&apos;s content.
-                    </MDBCardText>
-                    <button onClick={this.handleClick}>Click to flip</button>
+                            {this.state.answer}
+                        </MDBCardText>
+                        <button onClick={this.handleClick}>Click to flip</button>
                     </MDBCardBody>
                 </MDBCard>
                 </ReactCardFlip>
