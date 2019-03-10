@@ -4,9 +4,26 @@ import { MDBContainer } from "mdbreact";
 import Questions from "../components/QuizQuestion/QuizQuestion";
 
 
-function TakeQuiz() {
+class TakeQuiz extends React.Component {
+    state = {
+        score: 0,
+        message: "Begin Quiz",
+        correctAnswers: [],
+        allAnswers: []
+    }
 
-    return (
+    componentDidMount() {
+
+    }
+    //begin the quiz
+    //when user clicks button "next", check to see if answer is correct
+    //add to correct answer array if correct and into allAnswers array 
+    //check to see if allAnswers has reached the total number of questions in the quiz
+    //if not, increment through array of questions to next question
+    //at the end of the quiz, score out of total number of questions - ie 8/10
+
+    render() {
+        return (
         <MDBContainer fluid>
             <Header>
                 <h1 className="display-3">Quiz Your Web Accessibility Knowledge</h1>
@@ -16,6 +33,7 @@ function TakeQuiz() {
             <Questions />
         </MDBContainer>
         );
+    }
 }
 
 

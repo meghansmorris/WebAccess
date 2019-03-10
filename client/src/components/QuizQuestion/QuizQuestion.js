@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
-import { MDBCard, MDBCardTitle, MDBCardBody, MDBCol, MDBRow } from 'mdbreact';
+import { MDBCard, MDBCardTitle, MDBCardBody, MDBCol, MDBRow, MDBBtn } from 'mdbreact';
 
 class Questions extends Component{
 
@@ -44,7 +44,7 @@ class Questions extends Component{
         };
 
 
-    render() {
+    render(props) {
         return (
         <>
         <MDBRow>
@@ -68,6 +68,12 @@ class Questions extends Component{
                         </div>
                     </MDBCardBody>
                 </MDBCard>
+            </MDBCol>
+        </MDBRow>
+        <MDBRow>
+            <MDBCol size="5"></MDBCol>
+            <MDBCol size="3">
+                <MDBBtn color="mdb-color" onClick={()=>props.score(props.id)}>Next</MDBBtn>
             </MDBCol>
         </MDBRow>
         </>
