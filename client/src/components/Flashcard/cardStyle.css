@@ -1,0 +1,14 @@
+.card {
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.card-body {
+    text-align: center;
+    
+}
+
+.carousel-inner {
+    background: teal;
+}
