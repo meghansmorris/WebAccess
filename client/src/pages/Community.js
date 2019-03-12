@@ -18,7 +18,8 @@ componentDidMount() {
 
   loadComments = () => {
       API.getComments()
-        .then(res => console.log(res))
+      .then(res => this.setState({ comments: res.data }))
+      .catch(err => console.log(err));
   }
 
     render() {
@@ -40,6 +41,7 @@ componentDidMount() {
                         {comment.headline} by {comment.name}
                       </strong>
                         <p>{comment.commentText}</p>
+                        <p>{comment.dateCreated}</p>
                     </a>
                   </ListItem>
                 ))}
