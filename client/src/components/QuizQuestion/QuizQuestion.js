@@ -18,11 +18,6 @@ class Questions extends Component{
         componentDidMount() {
           this.loadQuiz();
         };
-
-        // handleFormSubmit = event => {
-        //     event.preventDefault();
-
-        // }
       
         loadQuiz = () => {
             API.getQuiz()

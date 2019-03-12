@@ -1,7 +1,7 @@
 import React from "react";
 import HomeHeader from "../components/HomeHeader/HomeHeader";
 import SiteSearch from "../components/SiteSearch/SiteSearch";
-import { MDBCol, MDBRow, MDBContainer, MDBIcon } from "mdbreact";
+import { MDBCol, MDBRow, MDBContainer, MDBIcon, MDBTooltip } from "mdbreact";
 
 function Landing() {
     return (
@@ -22,19 +22,40 @@ function Landing() {
                 </MDBCol>
             </MDBRow>
             <MDBRow>
-                <MDBCol md="4"></MDBCol>
-                <MDBCol md="6">
-                    <span>                        
-                        <a href="/community" className="pl-1 mr-5">
-                            <MDBIcon far icon="comments" size="4x" className="grey-text pr-3" alt="join the conversation" />
-                        </a>
+                <MDBCol md="2"></MDBCol>
+                <MDBCol md="3">
+                    <MDBTooltip 
+                            placement="bottom"
+                            component="MDBCol"
+                            tag="a"
+                            tooltipContent="Join the Conversation">
+                            <a href="/community" className="pl-1 mr-5">
+                                <MDBIcon far icon="comments" size="4x" className="grey-text pr-3" alt="join the conversation" />
+                            </a>                    
+                        </MDBTooltip> 
+                </MDBCol>
+                <MDBCol md="3">
+                    <MDBTooltip 
+                        placement="bottom"
+                        component="MDBCol"
+                        tag="a"
+                        tooltipContent="Learn Web Accessibility">
                         <a href="/learn" className="mr-5">
                             <MDBIcon fas icon="puzzle-piece" size="4x" className="grey-text pr-3" alt="learn" />
-                        </a>
+                        </a>                  
+                    </MDBTooltip> 
+                </MDBCol>
+                <MDBCol md="3">
+                    <MDBTooltip 
+                        placement="bottom"
+                        component="MDBCol"
+                        tag="a"
+                        tooltipContent="Take a Quiz">
                         <a href="/quiz" className="mr-4">
                             <MDBIcon fas icon="question" size="4x" className="grey-text pr-3" alt="take a quiz" />
-                        </a>
-                    </span>
+                        </a>                 
+                    </MDBTooltip> 
+
                 </MDBCol>
             </MDBRow>
             <MDBRow>
