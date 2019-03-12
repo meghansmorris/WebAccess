@@ -29,10 +29,10 @@ function Landing() {
                             <MDBIcon far icon="comments" size="4x" className="grey-text pr-3" alt="join the conversation" />
                         </a>
                         <a href="/learn" className="mr-5">
-                            <MDBIcon fas icon="puzzle-piece" size="4x" className="grey-text pr-3" alt="learn" />
+                            <MDBIcon  icon="puzzle-piece" size="4x" className="grey-text pr-3" alt="learn" />
                         </a>
                         <a href="/quiz" className="mr-4">
-                            <MDBIcon fas icon="question" size="4x" className="grey-text pr-3" alt="take a quiz" />
+                            <MDBIcon  icon="question" size="4x" className="grey-text pr-3" alt="take a quiz" />
                         </a>
                     </span>
                 </MDBCol>

@@ -1,7 +1,8 @@
 import React from "react";
 import Header from "../components/Header/Header";
-import { MDBContainer } from "mdbreact";
-import Flashcard from "../components/Flashcard/Flashcard";
+import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
+import Carousel from "../components/Carousel/Carousel"
+import Categories from "../components/CategoryList/CategoryList"
 
 function Learn() {
 
@@ -13,7 +14,15 @@ function Learn() {
                 <hr className="my-2" />
                 <h2 className="lead">Flip through the flashcards to test your knowledge.</h2>
             </Header>
-            <Flashcard />
+            <MDBRow>
+                <MDBCol md="3">
+                    <Categories />
+                </MDBCol>
+                <MDBCol md="9">
+                <Carousel></Carousel>
+                </MDBCol>
+            </MDBRow>
+            
         </MDBContainer>
         );
 
