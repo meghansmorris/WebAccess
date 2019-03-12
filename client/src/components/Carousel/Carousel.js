@@ -14,7 +14,8 @@ class CarouselPage extends Component {
         this.state = {
             isFlipped: false,
             cards: [],
-            currentCardIndex: 0
+            currentCardIndex: 0,
+            category:""
         };
         this.handleClick = this.handleClick.bind(this);
         this.nextSlide = this.nextSlide.bind(this);
@@ -66,6 +67,7 @@ class CarouselPage extends Component {
         this.setState(prevState => ({ isFlipped: !prevState.isFlipped }));
         console.log(this.state)
     }
+
 
     render() {
         return (
