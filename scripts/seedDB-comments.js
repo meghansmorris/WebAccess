@@ -10,9 +10,15 @@ mongoose.connect(
 
 const commentSeed = [
   {
-    _headlineId: "sample",
+    name: "Jane",
+    headline: "headline",
     commentText: "this is the text",
   },
+  {
+    name: "Steve",
+    headline: "second sample headline",
+    commentText: "text for second comment"
+  }
 
 ]
 

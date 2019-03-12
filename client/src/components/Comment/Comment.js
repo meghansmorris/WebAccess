@@ -1,38 +1,55 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
-import { MDBCard, MDBCardTitle, MDBCardBody, MDBCol, MDBRow, MDBBtn } from 'mdbreact';
 
-class Comment extends Component{
-
-    state = {
-        _headlineId: "",
-        commentText: "",
-        date: "",
-
-    }
-
-    componentDidMount() {
-        this.loadComment();
-      };
-    
-      loadComment = () => {
-          API.getComment()
-            .then(res => 
-              console.log(res)
-            //   this.setState({
-            //       _id: res.data[0]._id, 
-            //       question: res.data[0].question, 
-            //       ans1: res.data[0].ans1, 
-
-            //   })
-              //console.log(`question: ${res.data[1].question}, answers: ${res.data[0].answers.ans1}${res.data[0].answers.ans2}${res.data[0].answers.ans3}, category: ${res.data[0].category}`),
-              //console.log(res)
-            )
-            .catch(err => console.log(err));
-      };
+import { MDBCol, MDBRow } from 'mdbreact';
 
 
+class SingleComment extends Component{
+
+  state = {
+      headline: "",
+      name: "",
+      commentText: "",
+      dateCreated: "",
+
+  };
+
+  // componentDidMount() {
+  //     this.loadComment();
+  //   };
+  
+  // loadComment = () => {
+  //     API.getComment()
+  //       .then(res => 
+  //         //console.log(res)
+  //         this.setState({
+  //           name: res.data[0].name,
+  //           headline: res.data[0].headline,
+  //           commentText: res.data[0].commentText,
+  //           dateCreated: res.data[0].dateCreated
+  //         })
+  //       )
+  //       // .catch(err => console.log(err));
+  // };
+
+//need to add entry form for new comment
+
+  render () {
+    return (
+      <>
+        <MDBRow>
+          <MDBCol md="1"></MDBCol>
+          <MDBCol md="6">
+
+          </MDBCol>
+
+        </MDBRow>
 
 
+      
+      </>
+    )
+  }    
+};
 
-}
+export default SingleComment;
