@@ -3,9 +3,14 @@ const Schema = mongoose.Schema;
 
 const quizSchema = new Schema ({
     question: { type: String, required: true },
-    answers: {
-        type: Map,
-        of: String,
+    ans1: {
+        type: String,
+    },
+    ans2: {
+        type: String,
+    },
+    ans3: {
+        type: String,
     },
     correctAns: {
         type: String,
