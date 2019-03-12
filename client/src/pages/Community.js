@@ -1,14 +1,15 @@
 import React, { Component } from "react";
 import API from "../utils/API";
 import Header from "../components/Header/Header";
-import NewPost from "../components/Form/Form";
+import NewPost from "../components/Modal/Modal";
+import { List, ListItem } from "../components/List/List";
 // import SingleComment from "../components/Comment/Comment";
 import { MDBContainer } from "mdbreact";
 
 class Community extends Component {
 
 state = {
-
+    comments: []
 }
 
 componentDidMount() {
@@ -30,6 +31,22 @@ componentDidMount() {
                     <h2 className="lead">Add thoughts, answer questions from other developers and discuss strategies for web accessibility.</h2>
                 </Header>
                 <NewPost />
+                {this.state.comments.length ? (
+                <List>
+                {this.state.comments.map(comment => (
+                  <ListItem key={comment._id}>
+                    <a href={"/community/" + comment._id}>
+                      <strong>
+                        {comment.headline} by {comment.name}
+                      </strong>
+                        <p>{comment.commentText}</p>
+                    </a>
+                  </ListItem>
+                ))}
+              </List>
+            ) : (
+              <h3>No Results to Display</h3>
+            )}
             </MDBContainer>
             );
     }
