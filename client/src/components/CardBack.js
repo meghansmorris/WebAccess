@@ -1,8 +1,31 @@
 import React from "react";
+import { MDBCard, MDBCardBody, MDBCardTitle, MDBCardText, MDBBtn } from 'mdbreact';
 
 function CardBack(props) {
+
+    if(!props.card) {
+        return(
+            <MDBCard style={{ width: "80%" }} key="back">
+                <MDBCardBody>
+                    <MDBCardTitle></MDBCardTitle>
+                    <MDBCardText>
+                        
+                    </MDBCardText>
+                    <MDBBtn >Click to flip</MDBBtn>
+                </MDBCardBody>
+            </MDBCard>
+        )
+    }
     return (
-        <p>This is the flashcard question.</p>
+        <MDBCard style={{ width: "80%" }} key="back">
+                <MDBCardBody>
+                    <MDBCardTitle>Category: {props.card.category}</MDBCardTitle>
+                    <MDBCardText>
+                        {props.card.answer}
+                    </MDBCardText>
+                    <MDBBtn onClick={() => props.clickFunction()}>Click to flip</MDBBtn>
+                </MDBCardBody>
+            </MDBCard>
     )
 }
 

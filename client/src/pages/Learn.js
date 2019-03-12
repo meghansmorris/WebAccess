@@ -1,7 +1,6 @@
 import React from "react";
 import Header from "../components/Header/Header";
 import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
-import Flashcard from "../components/Flashcard/Flashcard";
 import Carousel from "../components/Carousel"
 import Categories from "../components/CategoryList/CategoryList"
 
