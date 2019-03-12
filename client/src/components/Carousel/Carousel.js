@@ -1,9 +1,11 @@
 import React, { Component } from "react";
-import API from "../utils/API";
+import API from "../../utils/API";
 import ReactCardFlip from 'react-card-flip';
-import Arrow from "./Arrow";
-import CardFront from "./CardFront";
-import CardBack from "./CardBack";
+import { MDBIcon } from 'mdbreact'
+import Arrow from "../Arrow/Arrow";
+import CardFront from "../CardFront";
+import CardBack from "../CardBack";
+import "./carouselStyle.css";
 
 class CarouselPage extends Component {
 
@@ -41,7 +43,8 @@ class CarouselPage extends Component {
         const index = shouldResetIndex ? lastIndex : currentCardIndex - 1;
 
         this.setState({
-            currentCardIndex: index
+            currentCardIndex: index, 
+            isFlipped: false
         });
     }
 
@@ -52,7 +55,8 @@ class CarouselPage extends Component {
         const index = shouldResetIndex ? 0 : currentCardIndex + 1;
 
         this.setState({
-            currentCardIndex: index
+            currentCardIndex: index,
+            isFlipped: false
         });
     }
 
@@ -76,14 +80,17 @@ class CarouselPage extends Component {
                         key="back"
                         clickFunction={this.handleClick}/>
                 </ReactCardFlip>
+                <div className="arrows text-center">
                 <Arrow
                     direction="left"
                     clickFunction={this.previousSlide}
-                    glyph="&#9664;" />
+                    glyph="&#9664;"/>
+                   
                 <Arrow
                     direction="right"
                     clickFunction={this.nextSlide}
                     glyph="&#9654;" />
+                </div>
             </>
         );
     }
@@ -91,7 +98,6 @@ class CarouselPage extends Component {
 
 
 export default CarouselPage;
-
 
 
 

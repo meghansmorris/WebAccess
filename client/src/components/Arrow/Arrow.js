@@ -1,11 +1,12 @@
 import React from "react";
+import "./arrowStyle.css";
 
 const Arrow = ({ direction, clickFunction, glyph }) => (
-	<div 
+	<span 
 		className={ `slide-arrow ${direction}` } 
 		onClick={ clickFunction }>
 		{ glyph } 
-	</div>
+	</span>
 );
 
 export default Arrow;

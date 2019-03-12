@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../components/Header/Header";
 import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
-import Carousel from "../components/Carousel"
+import Carousel from "../components/Carousel/Carousel"
 import Categories from "../components/CategoryList/CategoryList"
 
 function Learn() {
