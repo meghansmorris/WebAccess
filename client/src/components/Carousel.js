@@ -67,10 +67,7 @@ class CarouselPage extends Component {
         return (
             <>
             
-                <Arrow
-                    direction="left"
-                    clickFunction={this.previousSlide}
-                    glyph="&#9664;" />
+                
                 <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection="vertical">
                     <CardFront card={this.state.cards[this.state.currentCardIndex]}
                         key="front"
@@ -79,6 +76,10 @@ class CarouselPage extends Component {
                         key="back"
                         clickFunction={this.handleClick}/>
                 </ReactCardFlip>
+                <Arrow
+                    direction="left"
+                    clickFunction={this.previousSlide}
+                    glyph="&#9664;" />
                 <Arrow
                     direction="right"
                     clickFunction={this.nextSlide}
