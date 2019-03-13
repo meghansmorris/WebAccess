@@ -7,22 +7,31 @@ class NewPost extends Component {
 
     state = {
         comment: [],
+        postName: "",
+        postMessage: "",
+        postHeadline: "",
         modal: false
     }
 
     handleInputChange = (event) => {
-        const { value } = event.target;
-        console.log(value);
+        const { name, value } = event.target;
+        this.setState({
+          [name]: value
+        });
     }
 
-    addNewPost = (data) => {
-      API.saveComment(data)
-      .then(res => this.setState({ comment: res.data }))
-      .catch(err => console.log(err));
+    addNewPost = () => {
+      console.log("inside new post")
+      // API.saveComment(data)
+      // .then(res => this.setState({ comment: res.data }))
+      // .catch(err => console.log(err));
+      console.log(this.state.postName);
+      this.toggle();
 
     }
 
     toggle = () => {
+      console.log("inside toggle");
         this.setState({
           modal: !this.state.modal
         });
@@ -41,7 +50,10 @@ class NewPost extends Component {
               <label htmlFor="postName" className="grey-text">
                 Your Name
               </label>
-                <Input id="postName" />
+                <Input id="postName"                 
+                value={this.state.postName}
+                onChange={this.handleInputChange}
+                name="postName" />
               <br />
               <label
                 htmlFor="postHeadline"
@@ -61,7 +73,7 @@ class NewPost extends Component {
                 <TextArea id="postMessage" />
 
               <div className="text-center mt-4">
-               <FormBtn onClick={this.toggle} addNewPost={}>Post</FormBtn>
+               <FormBtn onClick={this.addNewPost}>Post</FormBtn>
               </div>
             </form>
           </MDBCol>

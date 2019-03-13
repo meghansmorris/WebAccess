@@ -5,5 +5,13 @@ module.exports = {
         db.Comment.find({})
         .then(dbComment => res.json(dbComment))
         .catch(err => res.status(422).json(err))
-    }
+    },
+    create: function(req, res) {
+        db.Comment.create(req.body)
+        .then(dbComment => res.json(dbComment))
+        .catch(err => res.status(422).json(err))
+    },
+    
+
+
 }
