@@ -1,13 +1,14 @@
 import React from "react";
+import { MDBListGroup, MDBListGroupItem } from "mdbreact";
 
 export function List({ children }) {
   return (
-    <div className="list-overflow-container">
-      <ul className="list-group">{children}</ul>
-    </div>
+      <MDBListGroup className= "ml-5 mt-3" style={{ width: "70rem" }}>{children}</MDBListGroup>
   );
 }
 
 export function ListItem({ children }) {
-  return <li className="list-group-item">{children}</li>;
+  return (
+    <MDBListGroupItem>{children}</MDBListGroupItem>
+  );
 }

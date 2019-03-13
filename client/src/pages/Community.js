@@ -4,7 +4,7 @@ import Header from "../components/Header/Header";
 import NewPost from "../components/Modal/Modal";
 import { List, ListItem } from "../components/List/List";
 // import SingleComment from "../components/Comment/Comment";
-import { MDBContainer } from "mdbreact";
+import { MDBContainer,MDBBadge } from "mdbreact";
 import Moment from "react-moment";
 
 
@@ -38,16 +38,15 @@ componentDidMount() {
                 <List>
                 {this.state.comments.map(comment => (
                   <ListItem key={comment._id}>
-                    <a href={"/community/" + comment._id}>
-                      <strong>
-                        {comment.headline} by {comment.name}
-                      </strong>
-                        <p>{comment.commentText}</p>
-                        <p>Posted: <Moment format="D MMM YYYY" withTitle>
+                    <div className="d-flex w-100 justify-content-between">
+                        <h4 className="mb-1">{comment.headline}</h4>
+                        <MDBBadge color="info" className="d-flex justify-content-between align-items-center" pill>{comment.name}</MDBBadge>
+                        </div>
+                        <p className="mb-1">{comment.commentText}</p>
+                        <small>Posted: <Moment format="D MMM YYYY" withTitle>
                             {comment.dateCreated}
-                        </Moment></p>
-                    </a>
-                  </ListItem>
+                        </Moment></small>
+                    </ListItem>
                 ))}
               </List>
             ) : (
