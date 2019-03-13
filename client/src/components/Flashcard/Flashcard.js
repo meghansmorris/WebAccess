@@ -1,5 +1,5 @@
 import React from "react";
-import { MDBCard, MDBCardBody, MDBCardImage, MDBCardTitle, MDBCardText, MDBCol, MDBBtn, MDBCarouselItem } from 'mdbreact';
+import { MDBCard, MDBCardBody, MDBCardImage, MDBCardTitle, MDBCardText, MDBCol, MDBBtn } from 'mdbreact';
 import ReactCardFlip from 'react-card-flip';
 import "./cardStyle.css";
 // import CardFront from "../CardFront";

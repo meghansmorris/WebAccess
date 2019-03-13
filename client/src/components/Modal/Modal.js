@@ -1,20 +1,25 @@
 import React, { Component } from "react";
 import { Input, TextArea, FormBtn} from "../Form/Form";
 import { MDBBtn, MDBModal, MDBModalBody, MDBModalHeader, MDBRow, MDBCol } from 'mdbreact';
+import API from "../../utils/API";
 
 class NewPost extends Component {
 
     state = {
         comment: [],
-        name: "",
-        headline: "",
-        commentText: "",
         modal: false
     }
 
     handleInputChange = (event) => {
         const { value } = event.target;
         console.log(value);
+    }
+
+    addNewPost = (data) => {
+      API.saveComment(data)
+      .then(res => this.setState({ comment: res.data }))
+      .catch(err => console.log(err));
+
     }
 
     toggle = () => {
@@ -56,7 +61,7 @@ class NewPost extends Component {
                 <TextArea id="postMessage" />
 
               <div className="text-center mt-4">
-               <FormBtn onClick={this.toggle}>Post</FormBtn>
+               <FormBtn onClick={this.toggle} addNewPost={}>Post</FormBtn>
               </div>
             </form>
           </MDBCol>

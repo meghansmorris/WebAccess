@@ -6,6 +6,7 @@ import { List, ListItem } from "../components/List/List";
 // import SingleComment from "../components/Comment/Comment";
 import { MDBContainer,MDBBadge } from "mdbreact";
 import Moment from "react-moment";
+import DeleteBtn from "../components/DeleteBtn/DeleteBtn";
 
 
 class Community extends Component {
@@ -37,15 +38,18 @@ componentDidMount() {
                 {this.state.comments.length ? (
                 <List>
                 {this.state.comments.map(comment => (
-                  <ListItem key={comment._id}>
-                    <div className="d-flex w-100 justify-content-between">
-                        <h4 className="mb-1">{comment.headline}</h4>
-                        <MDBBadge color="info" className="d-flex justify-content-between align-items-center" pill>{comment.name}</MDBBadge>
+                    <ListItem key={comment._id}>
+                    <a href={"/comments/" + comment._id}>
+                        <div className="d-flex w-100 justify-content-between">
+                            <h4 className="mb-1">{comment.headline}</h4>
+                            <MDBBadge color="info" className="d-flex justify-content-between align-items-center" pill><strong>{comment.name}</strong></MDBBadge>
                         </div>
-                        <p className="mb-1">{comment.commentText}</p>
-                        <small>Posted: <Moment format="D MMM YYYY" withTitle>
-                            {comment.dateCreated}
-                        </Moment></small>
+                            <p className="mb-1">{comment.commentText}</p>
+                            <small>Posted: <Moment format="D MMM YYYY" withTitle>
+                                {comment.dateCreated}
+                            </Moment></small>
+                    </a>
+                    <DeleteBtn />
                     </ListItem>
                 ))}
               </List>
