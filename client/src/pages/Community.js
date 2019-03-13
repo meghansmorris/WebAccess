@@ -5,6 +5,8 @@ import NewPost from "../components/Modal/Modal";
 import { List, ListItem } from "../components/List/List";
 // import SingleComment from "../components/Comment/Comment";
 import { MDBContainer } from "mdbreact";
+import Moment from "react-moment";
+
 
 class Community extends Component {
 
@@ -41,13 +43,15 @@ componentDidMount() {
                         {comment.headline} by {comment.name}
                       </strong>
                         <p>{comment.commentText}</p>
-                        <p>{comment.dateCreated}</p>
+                        <p>Posted: <Moment format="D MMM YYYY" withTitle>
+                            {comment.dateCreated}
+                        </Moment></p>
                     </a>
                   </ListItem>
                 ))}
               </List>
             ) : (
-              <h3>No Results to Display</h3>
+              <h3>No Discussions to Display</h3>
             )}
             </MDBContainer>
             );
