@@ -15,7 +15,7 @@ function Flashcard(props, onClick) {
             <MDBCard style={{ width: "80%" }} key="front">
                 <MDBCardBody>
                     <MDBCardTitle>
-                        <p>Your card will load shortly</p>
+                        <p>Choose a category to see the flashcards</p>
                     </MDBCardTitle>
                     <MDBCardText>
 
