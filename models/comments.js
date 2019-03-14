@@ -7,16 +7,20 @@ var Schema = mongoose.Schema;
 
 var commentSchema = new Schema({
   // The headline is the article associate with the comment
-  _headlineId: {
-    type: Schema.Types.ObjectId,
-    ref: "Headline"
+  name: {
+    type: String,
+    required: true
   },
-  // date is just a string
-  date: {
+  headline: {
+    type: String
+  },
+  commentText: {
+    type: String
+  },
+  dateCreated: {
     type: Date,
     default: Date.now
-  },
-  commentText: String
+  }
 });
 
 var Comment = mongoose.model("Comment", commentSchema);
