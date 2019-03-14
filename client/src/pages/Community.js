@@ -12,7 +12,11 @@ import DeleteBtn from "../components/DeleteBtn/DeleteBtn";
 class Community extends Component {
 
 state = {
-    comments: []
+    comments: [],
+    name: "",
+    headline: "",
+    commentText: "",
+    _id: ""
 }
 
 componentDidMount() {
@@ -24,6 +28,12 @@ componentDidMount() {
       .then(res => this.setState({ comments: res.data }))
       .catch(err => console.log(err));
   }
+
+  deleteComment = (id) => {
+      API.deleteComment(id)
+      .then(res => this.loadComments())
+      .catch(err => console.log(err));
+  };
 
     render() {
         return (
@@ -39,17 +49,21 @@ componentDidMount() {
                 <List>
                 {this.state.comments.map(comment => (
                     <ListItem key={comment._id}>
+                    <DeleteBtn onClick={() => this.deleteComment(comment._id)} />
                     <a href={"/comments/" + comment._id}>
+                    <MDBBadge 
+                        color="blue-grey" 
+                        className="d-flex justify-content-between align-items-center" 
+                        style={{ float: "left", font: "12px" }}><strong>{comment.name}</strong>
+                    </MDBBadge>
                         <div className="d-flex w-100 justify-content-between">
                             <h4 className="mb-1">{comment.headline}</h4>
-                            <MDBBadge color="info" className="d-flex justify-content-between align-items-center" pill><strong>{comment.name}</strong></MDBBadge>
                         </div>
                             <p className="mb-1">{comment.commentText}</p>
                             <small>Posted: <Moment format="D MMM YYYY" withTitle>
                                 {comment.dateCreated}
                             </Moment></small>
                     </a>
-                    <DeleteBtn />
                     </ListItem>
                 ))}
               </List>

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Input, TextArea, FormBtn} from "../Form/Form";
 import { MDBBtn, MDBModal, MDBModalBody, MDBModalHeader, MDBRow, MDBCol } from 'mdbreact';
 import API from "../../utils/API";
+import Community from "../../pages/Community";
 
 class NewPost extends Component {
 
@@ -20,14 +21,22 @@ class NewPost extends Component {
         });
     }
 
-    addNewPost = () => {
+    addNewPost = (event) => {
       console.log("inside new post")
-      // API.saveComment(data)
-      // .then(res => this.setState({ comment: res.data }))
-      // .catch(err => console.log(err));
+      event.preventDefault();
+      if (this.state.postName && this.state.postMessage) {
+        API.saveComment({
+          postName: this.state.postName,
+          postHeadline: this.state.postHeadline,
+          postMessage: this.state.postMessage
+        })
+        .then(res => this.loadComments())
+        .catch(err => console.log(err))
+      }
       console.log(this.state.postName);
+      console.log(this.state.postHeadline);
+      console.log(this.state.postMessage);
       this.toggle();
-
     }
 
     toggle = () => {
@@ -61,7 +70,10 @@ class NewPost extends Component {
               >
                 Your Post Headline
               </label>
-                <Input id="postHeadline" />
+                <Input id="postHeadline"
+                value={this.state.postHeadline}
+                onChange={this.handleInputChange}
+                name="postHeadline" />
               
               <br />
               <label
@@ -70,10 +82,16 @@ class NewPost extends Component {
               >
                 Your Post Message
               </label>
-                <TextArea id="postMessage" />
+                <TextArea id="postMessage"
+                value={this.setState.postMessage}
+                onChange={this.handleInputChange}
+                name="postMessage" />
 
               <div className="text-center mt-4">
-               <FormBtn onClick={this.addNewPost}>Post</FormBtn>
+               <FormBtn 
+                  disabled={!(this.state.postName && this.state.postMessage)} 
+                  onClick={this.addNewPost}>Post
+                </FormBtn>
               </div>
             </form>
           </MDBCol>
