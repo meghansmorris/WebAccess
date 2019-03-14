@@ -15,8 +15,8 @@ state = {
     comments: [],
     name: "",
     headline: "",
-    commentText: "",
-    _id: ""
+    commentText: ""
+
 }
 
 componentDidMount() {
