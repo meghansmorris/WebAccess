@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Input, TextArea, FormBtn} from "../Form/Form";
 import { MDBBtn, MDBModal, MDBModalBody, MDBModalHeader, MDBRow, MDBCol } from 'mdbreact';
 import API from "../../utils/API";
-import Community from "../../pages/Community";
 
 class NewPost extends Component {
 
@@ -21,14 +20,20 @@ class NewPost extends Component {
         });
     }
 
+    loadComments = () => {
+      API.getComments()
+      .then(res => this.setState({ comment: res.data }))
+      .catch(err => console.log(err));
+    }
+
     addNewPost = (event) => {
       console.log("inside new post")
       event.preventDefault();
       if (this.state.postName && this.state.postMessage) {
         API.saveComment({
-          postName: this.state.postName,
-          postHeadline: this.state.postHeadline,
-          postMessage: this.state.postMessage
+          name: this.state.postName,
+          headline: this.state.postHeadline,
+          commentText: this.state.postMessage
         })
         .then(res => this.loadComments())
         .catch(err => console.log(err))
@@ -37,6 +42,7 @@ class NewPost extends Component {
       console.log(this.state.postHeadline);
       console.log(this.state.postMessage);
       this.toggle();
+      window.location.reload();
     }
 
     toggle = () => {
