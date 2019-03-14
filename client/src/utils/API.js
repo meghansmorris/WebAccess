@@ -11,13 +11,25 @@ export default {
     return axios.get("/api/quiz");
   },
 
-  // Gets all quiz questions
+  // Gets all user information
   getUsers: function() {
     return axios.get("/api/user");
   },
 
-  // Gets all quiz questions
+  // -----Comment CRUD--------
   getComments: function() {
     return axios.get("/api/comments");
+  },
+
+  getComment: function(id) {
+    return axios.get("/api/comments" + id);
+  },
+
+  deleteComment: function(id) {
+    return axios.delete("/api/comments" + id);
+  },
+
+  saveComment: function(commentData) {
+    return axios.post("/api/comments", commentData);
   }
 };
