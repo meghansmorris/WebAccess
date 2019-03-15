@@ -3,7 +3,7 @@ import { MDBCard, MDBCardBody,  MDBCardTitle, MDBCardText, MDBBtn } from 'mdbrea
 
 
 function CardFront(props) {
-    console.log(props);
+    // console.log(props);
     
 
     if(!props.card) {
@@ -11,12 +11,12 @@ function CardFront(props) {
             <MDBCard style={{ width: "80%" }} key="front">
                 <MDBCardBody>
                     <MDBCardTitle>
-                        <p>Your card will load shortly</p>
+                        <p>Choose a category to see the flashcards.</p>
                     </MDBCardTitle>
                     <MDBCardText>
 
                     </MDBCardText>
-                    <MDBBtn >Click to flip</MDBBtn>
+                    {/* <MDBBtn >Click to flip</MDBBtn> */}
                 </MDBCardBody>
             </MDBCard>
         )

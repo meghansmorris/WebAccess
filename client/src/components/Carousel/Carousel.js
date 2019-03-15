@@ -5,39 +5,28 @@ import { MDBIcon } from 'mdbreact'
 import Arrow from "../Arrow/Arrow";
 import CardFront from "../CardFront";
 import CardBack from "../CardBack";
+import _ from "underscore";
 import "./carouselStyle.css";
 
 class CarouselPage extends Component {
 
     constructor(props) {
         super(props);
+        
         this.state = {
             isFlipped: false,
-            cards: [],
-            currentCardIndex: 0
+            filteredCards: this.props.filteredCards,
+            currentCardIndex: 0,
         };
         this.handleClick = this.handleClick.bind(this);
         this.nextSlide = this.nextSlide.bind(this);
         this.previousSlide = this.previousSlide.bind(this);
+        
     }
 
-    componentDidMount() {
-        this.loadCard();
-    }
-
-    loadCard = () => {
-        API.getCards()
-            .then(res =>
-            
-                this.setState({ cards: res.data })
-                // console.log(res.data)
-
-            )
-            .catch(err => console.log(err));
-    }
 
     previousSlide() {
-        const lastIndex = this.state.cards.length - 1;
+        const lastIndex = this.props.filteredCards.length - 1;
         const { currentCardIndex } = this.state;
         const shouldResetIndex = currentCardIndex === 0;
         const index = shouldResetIndex ? lastIndex : currentCardIndex - 1;
@@ -49,7 +38,7 @@ class CarouselPage extends Component {
     }
 
     nextSlide() {
-        const lastIndex = this.state.cards.length - 1;
+        const lastIndex = this.props.filteredCards.length - 1;
         const { currentCardIndex } = this.state;
         const shouldResetIndex = currentCardIndex === lastIndex;
         const index = shouldResetIndex ? 0 : currentCardIndex + 1;
@@ -67,16 +56,19 @@ class CarouselPage extends Component {
         console.log(this.state)
     }
 
-    render() {
+
+    render(props) {
+        console.log('carousel props: ', this.props)
         return (
             <>
             
-                
+               {/* <p> filteredCards:{this.state.filteredCards}
+                 </p> */}
                 <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection="vertical">
-                    <CardFront card={this.state.cards[this.state.currentCardIndex]}
+                    <CardFront card={this.props.filteredCards[this.state.currentCardIndex]}
                         key="front"
                         clickFunction={this.handleClick}/>
-                    <CardBack card={this.state.cards[this.state.currentCardIndex]}
+                    <CardBack card={this.props.filteredCards[this.state.currentCardIndex]}
                         key="back"
                         clickFunction={this.handleClick}/>
                 </ReactCardFlip>
