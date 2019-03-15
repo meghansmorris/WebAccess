@@ -16,6 +16,7 @@ class Learn extends Component {
             filteredCards: []
         }
         this.handleCategory = this.handleCategory.bind(this);
+        this.loadCard = this.loadCard.bind(this);
     }
     
     componentDidMount() {
