@@ -1,42 +1,8 @@
 import React from "react";
-
 import { MDBCard, MDBCardTitle, MDBCardBody, MDBCol, MDBRow, MDBBtn } from 'mdbreact';
 
 function Questions(props) {
-    console.log(props)
-        // state = {
-        //     _id: "",
-        //     question: "",
-        //     ans1: "",
-        //     ans2: "",
-        //     ans3: "",
-        //     correctAns: "",
-        //     category: "",
-        //     thumbnail: []
-        // };
-      
-        // componentDidMount() {
-        //   this.loadQuiz();
-        // };
-      
-        // loadQuiz = () => {
-        //     API.getQuiz()
-        //       .then(res => 
-        //         // console.log(`question: ${res.data}`)
-        //         this.setState({
-        //             _id: res.data[0]._id, 
-        //             question: res.data[0].question, 
-        //             ans1: res.data[0].ans1, 
-        //             ans2: res.data[0].ans2, 
-        //             ans3: res.data[0].ans3, 
-        //             correctAns: res.data[0].correctAns, 
-        //             category: res.data[0].category 
-        //         })
-        //         // console.log(`question: ${res.data[1].question}, answers: ${res.data[0].answers.ans1}${res.data[0].answers.ans2}${res.data[0].answers.ans3}, category: ${res.data[0].category}`),
-        //         // console.log(res)
-        //       )
-        //       .catch(err => console.log(err));
-        // };
+    console.log('quiz props', props)
 
         if(!props.card) {
             return(
@@ -53,8 +19,6 @@ function Questions(props) {
    
         return (
         <>
-        {/* <MDBRow> */}
-            {/* <MDBCol className="ml-5 pl-2 md-10"> */}
                 <MDBCard className="card-body" category={props.card.category} id={props.card.correctAns} >
                     <MDBCardTitle>{props.card.question}</MDBCardTitle>
                     <MDBCardBody>
@@ -87,8 +51,6 @@ function Questions(props) {
                         </div>
                     </MDBCardBody>
                 </MDBCard>
-            {/* </MDBCol> */}
-        {/* </MDBRow> */}
         <MDBRow>
             <MDBCol size="5"></MDBCol>
             <MDBCol size="3">
