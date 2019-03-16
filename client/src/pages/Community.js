@@ -29,10 +29,11 @@ componentDidMount() {
   }
 
   removeComment = (id) => {
+    console.log(id);
       API.deleteComment(id)
       .then(res => this.loadComments())
       .catch(err => console.log(err));
-      console.log(id);
+     
 
   };
 

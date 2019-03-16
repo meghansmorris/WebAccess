@@ -22,11 +22,11 @@ export default {
   },
 
   getComment: function(id) {
-    return axios.get("/api/comments" + id);
+    return axios.get("/api/comments/" + id);
   },
 
   deleteComment: function(id) {
-    return axios.delete("/api/comments" + id);
+    return axios.delete("/api/comments/" + id);
   },
 
   saveComment: function(commentData) {
