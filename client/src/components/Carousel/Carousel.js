@@ -1,11 +1,8 @@
 import React, { Component } from "react";
-import API from "../../utils/API";
 import ReactCardFlip from 'react-card-flip';
-import { MDBIcon } from 'mdbreact'
 import Arrow from "../Arrow/Arrow";
 import CardFront from "../CardFront";
 import CardBack from "../CardBack";
-import _ from "underscore";
 import "./carouselStyle.css";
 
 class CarouselPage extends Component {
