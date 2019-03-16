@@ -15,7 +15,7 @@ render() {
   return (
     <MDBNavbar color="teal darken-4" dark expand="md">
       <MDBNavbarBrand>
-        <strong className="white-text">Enabled Web Learning</strong>
+        <strong className="white-text">Enabling the Web</strong>
       </MDBNavbarBrand>
       <MDBNavbarToggler onClick={this.toggleCollapse} />
       <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>

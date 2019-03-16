@@ -51,7 +51,7 @@ componentDidMount() {
                 {this.state.comments.map(comment => (
                     <ListItem key={comment._id}>
                     <DeleteBtn onClick={() => this.removeComment(comment._id)} />
-                    <a href={"/comments/" + comment._id}>
+                    {/* <a href={"/comments/" + comment._id}> */}
                     <MDBBadge 
                         color="blue-grey" 
                         className="d-flex justify-content-between align-items-center" 
@@ -64,7 +64,7 @@ componentDidMount() {
                             <small className="grey-text">Posted: <Moment format="D MMM YYYY" withTitle>
                                 {comment.dateCreated}
                             </Moment></small>
-                    </a>
+                    {/* </a> */}
                     </ListItem>
                 ))}
               </List>
