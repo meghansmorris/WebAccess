@@ -9,7 +9,7 @@ function Questions(props) {
                 <MDBCard style={{ width: "80%" }} key="front">
                 <MDBCardBody>
                     <MDBCardTitle>
-                        <p>Your Quiz will load shortly.</p>
+                        <p>Choose a category to begin a quiz.</p>
                     </MDBCardTitle>
                    
                 </MDBCardBody>
