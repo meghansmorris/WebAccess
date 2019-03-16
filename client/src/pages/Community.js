@@ -58,10 +58,10 @@ componentDidMount() {
                         style={{ float: "left", font: "12px" }}><strong>{comment.name}</strong>
                     </MDBBadge>
                         <div className="d-flex w-100 justify-content-between">
-                            <h4 className="mb-1">{comment.headline}</h4>
+                            <h4 className="mb-1 black-text">{comment.headline}</h4>
                         </div>
-                            <p className="mb-1">{comment.commentText}</p>
-                            <small>Posted: <Moment format="D MMM YYYY" withTitle>
+                            <p className="mb-1 black-text">{comment.commentText}</p>
+                            <small className="grey-text">Posted: <Moment format="D MMM YYYY" withTitle>
                                 {comment.dateCreated}
                             </Moment></small>
                     </a>
