@@ -3,7 +3,6 @@ import API from "../utils/API";
 import Header from "../components/Header/Header";
 import NewPost from "../components/Modal/Modal";
 import { List, ListItem } from "../components/List/List";
-// import SingleComment from "../components/Comment/Comment";
 import { MDBContainer,MDBBadge } from "mdbreact";
 import Moment from "react-moment";
 import DeleteBtn from "../components/DeleteBtn/DeleteBtn";
@@ -29,10 +28,12 @@ componentDidMount() {
       .catch(err => console.log(err));
   }
 
-  deleteComment = (id) => {
+  removeComment = (id) => {
       API.deleteComment(id)
       .then(res => this.loadComments())
       .catch(err => console.log(err));
+      console.log(id);
+
   };
 
     render() {
@@ -49,7 +50,7 @@ componentDidMount() {
                 <List>
                 {this.state.comments.map(comment => (
                     <ListItem key={comment._id}>
-                    <DeleteBtn onClick={() => this.deleteComment(comment._id)} />
+                    <DeleteBtn onClick={() => this.removeComment(comment._id)} />
                     <a href={"/comments/" + comment._id}>
                     <MDBBadge 
                         color="blue-grey" 
