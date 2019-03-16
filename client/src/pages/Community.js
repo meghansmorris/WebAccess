@@ -3,7 +3,6 @@ import API from "../utils/API";
 import Header from "../components/Header/Header";
 import NewPost from "../components/Modal/Modal";
 import { List, ListItem } from "../components/List/List";
-// import SingleComment from "../components/Comment/Comment";
 import { MDBContainer,MDBBadge } from "mdbreact";
 import Moment from "react-moment";
 import DeleteBtn from "../components/DeleteBtn/DeleteBtn";
@@ -29,10 +28,12 @@ componentDidMount() {
       .catch(err => console.log(err));
   }
 
-  deleteComment = (id) => {
+  removeComment = (id) => {
       API.deleteComment(id)
       .then(res => this.loadComments())
       .catch(err => console.log(err));
+      console.log(id);
+
   };
 
     render() {
@@ -49,21 +50,21 @@ componentDidMount() {
                 <List>
                 {this.state.comments.map(comment => (
                     <ListItem key={comment._id}>
-                    <DeleteBtn onClick={() => this.deleteComment(comment._id)} />
-                    <a href={"/comments/" + comment._id}>
+                    <DeleteBtn onClick={() => this.removeComment(comment._id)} />
+                    {/* <a href={"/comments/" + comment._id}> */}
                     <MDBBadge 
                         color="blue-grey" 
                         className="d-flex justify-content-between align-items-center" 
                         style={{ float: "left", font: "12px" }}><strong>{comment.name}</strong>
                     </MDBBadge>
                         <div className="d-flex w-100 justify-content-between">
-                            <h4 className="mb-1">{comment.headline}</h4>
+                            <h4 className="mb-1 black-text">{comment.headline}</h4>
                         </div>
-                            <p className="mb-1">{comment.commentText}</p>
-                            <small>Posted: <Moment format="D MMM YYYY" withTitle>
+                            <p className="mb-1 black-text">{comment.commentText}</p>
+                            <small className="grey-text">Posted: <Moment format="D MMM YYYY" withTitle>
                                 {comment.dateCreated}
                             </Moment></small>
-                    </a>
+                    {/* </a> */}
                     </ListItem>
                 ))}
               </List>

@@ -12,8 +12,8 @@ const HomeHeader = () => {
                 }}>
             <div className="text-white text-center d-flex rgba-black-strong py-5 px-5">
               <div>
-                <h1 className=" display-2 py-3 font-weight-bold">
-                  <strong>Welcome!</strong>
+                <h1 className=" display-3 py-3 font-weight-bold">
+                  <strong>Welcome to Enabling the Web</strong>
                 </h1>
                 <h2 className="py-3 px-2">
                   As developers we all want to create web applications that are intuitive and provide value to our users. Let's work together to make sure EVERYONE can use our sites. 

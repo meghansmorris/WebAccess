@@ -40,11 +40,9 @@ const quizSeed = [
   },
   {
     question: "What is an important consideration for form design?",
-    answers: {
-      ans1: "Without specific instructions for how to use the form, it isn't accessible to all users.",
-      ans2: "As long as the form is navigable using the keyboard, all users can complete it.",
-      ans3: "If a form isn't labeled descriptively, it might be impossible for a user to know what type of content is required in an input field."
-    },
+    ans1: "Without specific instructions for how to use the form, it isn't accessible to all users.",
+    ans2: "As long as the form is navigable using the keyboard, all users can complete it.",
+    ans3: "If a form isn't labeled descriptively, it might be impossible for a user to know what type of content is required in an input field.",
     correctAns: "ans3",
     category: "Operable",
     thumbnail: ""

@@ -25,7 +25,7 @@ const cardSeed = [
   },
   {
     question: "Many people do not use a mouse to navigate the web, how can you make your site keyboard friendly?",
-    answer: "Take the time to make sure all functions on your page can be accessed or operated be keyboard, for example,a page that allows users to click and drag items in a list to reorder them also includes a series of controls that allows keyboard users to move items up, down or to the beginning and end of the list.",
+    answer: "Take the time to make sure all functions on your page can be accessed or operated be keyboard, for example, a page that allows users to click and drag items in a list to reorder them also includes a series of controls that allows keyboard users to move items up, down or to the beginning and end of the list.",
     category: "Operable",
     thumbnail: ""
   },
