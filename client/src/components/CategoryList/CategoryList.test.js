@@ -1,10 +1,11 @@
 import React from 'react';
 import {configure, shallow} from 'enzyme';
-import Flashcard from './Flashcard';
+import CategoryList from './CategoryList';
 import Adapter from 'enzyme-adapter-react-16';
+import { MDBListGroup } from 'mdbreact';
 
 configure({ adapter: new Adapter() });
 
 it('renders without crashing', () => {
-  shallow(<Flashcard />);
+  shallow(<CategoryList />);
 });
