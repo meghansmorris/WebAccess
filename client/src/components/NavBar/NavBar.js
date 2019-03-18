@@ -37,7 +37,7 @@ render() {
           </MDBNavItem>
         </MDBNavbarNav>
         <MDBNavbarNav right>
-          <MDBNavItem >
+          <MDBNavItem size="md" >
             <SiteSearch />
           </MDBNavItem>
         </MDBNavbarNav>
