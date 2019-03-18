@@ -1,10 +1,12 @@
 import React from 'react';
-import {configure, shallow} from 'enzyme';
-import Modal from './Modal';
+import {configure, mount} from 'enzyme';
+import NewPost from './Modal';
 import Adapter from 'enzyme-adapter-react-16';
+import 'jest-enzyme';
 
 configure({ adapter: new Adapter() });
 
 it('renders without crashing', () => {
-  shallow(<Modal />);
+  const wrapper = mount(<NewPost />)
+  expect(wrapper).toHaveState({ modal: false });
 });

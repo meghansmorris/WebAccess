@@ -73,12 +73,14 @@ class CarouselPage extends Component {
                 <Arrow
                     direction="left"
                     clickFunction={this.previousSlide}
-                    glyph="&#9664;"/>
+                    glyph="&#9664;"
+                    />
                    
                 <Arrow
                     direction="right"
                     clickFunction={this.nextSlide}
-                    glyph="&#9654;" />
+                    glyph="&#9654;"
+                    />
                 </div>
             </>
         );
