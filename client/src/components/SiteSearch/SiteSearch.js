@@ -18,6 +18,8 @@ function SiteSearch() {
                 <MDBBtn id="searchSubmit" name="submit" alt="Submit" size="sm" title="Submit">Submit</MDBBtn>
         </form>
     </MDBCol>
+    <div className="gcse-searchbox-only" data-resultsUrl="https://enablingtheweb.herokuapp.com/searchresults"
+        data-newWindow="true" data-queryParameterName="search" />`
 </MDBRow>
     )
   }
