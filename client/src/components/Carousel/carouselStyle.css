@@ -2,7 +2,7 @@
     margin: auto;
     margin-top: 15px;
     margin-bottom: 15px;
-    background-color: teal;
+    background-color:#e0f2f1;
 }
 
 .card-body {
@@ -17,3 +17,4 @@
 .arrows {
     justify-content: center;
 }
+

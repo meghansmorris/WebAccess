@@ -1,8 +1,9 @@
 .headCat {
-    
+    background: #6a7272 !important;
     font-weight: bold;
 }
 
 .catOp {
+    background: #f7f4f0 !important;
     cursor: pointer;
 }

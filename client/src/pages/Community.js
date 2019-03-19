@@ -50,7 +50,7 @@ componentDidMount() {
                 {this.state.comments.length ? (
                 <List>
                 {this.state.comments.map(comment => (
-                    <ListItem key={comment._id}>
+                    <ListItem key={comment._id} >
                     <DeleteBtn onClick={() => this.removeComment(comment._id)} />
                     {/* <a href={"/comments/" + comment._id}> */}
                     <MDBBadge 

@@ -11,7 +11,7 @@ function CardBack(props) {
                     <MDBCardText>
                         
                     </MDBCardText>
-                    <MDBBtn >Click to flip</MDBBtn>
+                    {/* <MDBBtn >Click to flip</MDBBtn> */}
                 </MDBCardBody>
             </MDBCard>
         )
@@ -23,7 +23,7 @@ function CardBack(props) {
                     <MDBCardText>
                         {props.card.answer}
                     </MDBCardText>
-                    <MDBBtn onClick={() => props.clickFunction()}>Click to flip</MDBBtn>
+                    <button className="btn cardButton" onClick={() => props.clickFunction()}>Click to flip</button>
                 </MDBCardBody>
             </MDBCard>
     )

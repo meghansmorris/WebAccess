@@ -29,7 +29,7 @@ function Flashcard(props, onClick) {
                     <MDBCardText>
                         
                     </MDBCardText>
-                    <MDBBtn >Click to flip</MDBBtn>
+                    <MDBBtn className="cardButton">Click to flip</MDBBtn>
                 </MDBCardBody>
             </MDBCard>
 
@@ -48,7 +48,7 @@ function Flashcard(props, onClick) {
                     <MDBCardText>
                         {props.card.question}
                     </MDBCardText>
-                    <MDBBtn onClick={() => onClick}>Click to flip</MDBBtn>
+                    <button className=" cardButton" onClick={() => onClick}>Click to flip</button>
                 </MDBCardBody>
             </MDBCard>
 
@@ -58,7 +58,7 @@ function Flashcard(props, onClick) {
                     <MDBCardText>
                         {props.card.answer}
                     </MDBCardText>
-                    <MDBBtn onClick={() => onClick}>Click to flip</MDBBtn>
+                    <button className=" cardButton" onClick={() => onClick}>Click to flip</button>
                 </MDBCardBody>
             </MDBCard>
 
