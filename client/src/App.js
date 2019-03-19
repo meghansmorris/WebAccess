@@ -8,6 +8,7 @@ import Community from "./pages/Community";
 import NoMatch from "./pages/NoMatch";
 import NavBar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
+import "./App.css"
 
 
 

@@ -9,6 +9,6 @@ export function List({ children }) {
 
 export function ListItem({ children }) {
   return (
-    <MDBListGroupItem>{children}</MDBListGroupItem>
+    <MDBListGroupItem className="comments">{children}</MDBListGroupItem>
   );
 }

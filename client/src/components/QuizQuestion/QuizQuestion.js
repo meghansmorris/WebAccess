@@ -1,5 +1,6 @@
 import React from "react";
 import { MDBCard, MDBCardTitle, MDBCardBody, MDBCol, MDBRow, MDBBtn } from 'mdbreact';
+import "./quiz.css"
 
 function Questions(props) {
     console.log('quiz props', props)

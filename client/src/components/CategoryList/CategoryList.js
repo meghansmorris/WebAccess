@@ -10,7 +10,7 @@ const Categories = (props) => {
 return (
 <MDBContainer>
   <MDBListGroup >
-    <MDBListGroupItem className="headCat teal darken-1 text-white" >Categories</MDBListGroupItem>
+    <MDBListGroupItem className="headCat text-white" >Categories</MDBListGroupItem>
     {_.map(categories, function(category) {
       return <MDBListGroupItem className="catOp" key={category} onClick={() => props.handleCategory(category)}>{category}</MDBListGroupItem>
     })}
