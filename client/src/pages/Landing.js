@@ -50,9 +50,12 @@ function Landing() {
                     <p>
                         Our learning portal was built using the Web Content Accessibility Guidelines 2.0 and is structured using the four principles that lay the foundation for web use and content. To make the best use of our portal, understand what each principle considers.
                     </p>
-                    <button className="principles-btn btn">
-                        Learn More
-                    </button>
+                    <a href="#fourPrinciples">
+                        <button className="principles-btn btn">
+                            Learn More
+                        </button>
+                    </a>
+
                     </MDBCardBody>
                 </MDBCol>
                 <MDBCol md="6" xl="5" className="mb-4">
@@ -127,6 +130,46 @@ function Landing() {
                     </MDBCardBody>
                 </MDBCol>
                 </MDBRow>
+            </section>
+            <section>
+                <div id="fourPrinciples" className="principleSection" fluid>
+                <MDBRow>
+                    <MDBCol md="2"></MDBCol>
+                    <MDBCol md="8">
+                        <h2 className=" principle-head font-weight-bold">
+                        Understanding the Four Principles of Accessibility
+                        </h2>
+                    </MDBCol>
+                </MDBRow>
+                <MDBRow>
+                    <MDBCol md="1"></MDBCol>
+                    <MDBCol md="10" >
+                        <p>The guidelines and Success Criteria are organized around the following four principles, which lay the foundation necessary for anyone to access and use Web content. 
+                            Anyone who wants to use the Web must have content that is:
+                        </p>
+                        <ul>
+                            <li>
+                            <strong>Perceivable</strong> - Information and user interface components must be presentable to users in ways they can perceive.
+                            </li>
+                            <li>
+                            <strong>Operable</strong> - User interface components and navigation must be operable.
+                            </li>
+                            <li>
+                            <strong>Understandable</strong> - Information and the operation of user interface must be understandable.
+                            </li>
+                            <li>
+                            <strong>Robust</strong> - Content must be robust enough that it can be interpreted reliably by a wide variety of user agents, including assistive technologies. 
+                            </li>
+                        </ul>
+                        <p>If any of these are not true, users with disabilities will not be able to use the Web.
+                        </p>
+                        <p>Under each of the principles are guidelines and Success Criteria that help to address these principles for people with disabilities. 
+                            There are many general usability guidelines that make content more usable by all people, including those with disabilities. 
+                            To learn more, visit <a href="https://www.w3.org/WAI/" target="_blank" alt="W3C site">W3C's Web Accessibility Initiative</a>.</p>
+                    </MDBCol>
+                </MDBRow>
+                </div>
+
             </section>
 
         </MDBContainer>

@@ -37,6 +37,39 @@ body {
     align-self: center;
 }
 
+.principleSection {
+    background: #f7f4f0 !important;
+    margin: 0;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.principle-head {
+    padding-left: 35px;
+    padding-bottom: 10px;
+}
+
+.principles-btn, .flashcards-btn, .quiz-btn, .conversation-btn {
+    background-color: #203e95 !important;
+}
+
+.conversation-btn:hover {
+    color: white !important;
+    font-style: italic !important;
+}
+.principles-btn:hover {
+    color: white !important;
+    font-style: italic !important;
+}
+.flashcards-btn:hover {
+    color: white !important;
+    font-style: italic !important;
+}
+.quiz-btn:hover {
+    color: white !important;
+    font-style: italic !important;
+}
+
 .card-row {
     margin-top: 30px;
 }
