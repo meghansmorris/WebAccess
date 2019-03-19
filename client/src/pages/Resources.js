@@ -12,7 +12,6 @@ function Resources() {
                 <hr className="my-2" />
                 <h2 className="lead">Looking for more? Here are a few helpful resources to continue building enabled web applications.</h2>
             </Header>
-            <SiteSearch />
             
             <section className="my-5">
             <MDBRow>

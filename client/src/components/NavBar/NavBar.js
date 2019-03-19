@@ -37,9 +37,9 @@ render() {
           </MDBNavItem>
         </MDBNavbarNav>
         <MDBNavbarNav right>
-          <MDBNavItem size="md" >
+          {/* <MDBNavItem > */}
             <SiteSearch />
-          </MDBNavItem>
+          {/* </MDBNavItem> */}
         </MDBNavbarNav>
       </MDBCollapse>
     </MDBNavbar>
