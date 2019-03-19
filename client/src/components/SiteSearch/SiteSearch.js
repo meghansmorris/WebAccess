@@ -18,24 +18,13 @@ class SiteSearch extends Component {
     render() {
         return (
         <MDBRow>
-        <MDBCol md="2"></MDBCol>
-        <MDBCol md="9">
-            {/* <form className="form-inline mt-4 mb-4">
-                <MDBIcon icon="search" size="1x" className="grey-text" alt="search" />
-                <input className="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search the site" aria-label="Search the site" />
-            </form> */}
-            {/* <div className="gcse-searchbox-only" data-resultsUrl="https://enablingtheweb.herokuapp.com/searchresults"
-            data-newWindow="true" data-queryParameterName="search" /> */}
-            <form className="form-inline mt-4 mb-4 gcse-searchbox-only" data-resultsUrl="https://enablingtheweb.herokuapp.com/searchresults"
+            <form className="form-inline gcse-searchbox-only mr-4" data-resultsUrl="https://enablingtheweb.herokuapp.com/searchresults"
             data-newWindow="true" data-queryParameterName="search" method="get" title="Search Form" action="https://cse.google.com/cse/publicurl">
-                <MDBIcon icon="search" size="1x" className="grey-text" alt="search" />
-                    <input className="form-control form-control-sm ml-3 w-75" type="text" id="q" name="q" title="Search" placeholder="Search the site" aria-label="Search the site" alt="Search Text" />
+                <MDBIcon icon="search" size="1x" className="grey-text mr-2" alt="search" />
+                    <input className="form-control form-control-sm " type="text" id="q" name="q" title="Search" placeholder="Search the site" aria-label="Search the site" alt="Search Text" />
                     <input type="hidden" id="cx" name="cx" value="000810281350211822819:o4tbpnp1jce" />
-                    <MDBBtn id="searchSubmit" name="submit" alt="Submit" size="sm" title="Submit">Submit</MDBBtn>
             </form>
-        </MDBCol>
-        
-    </MDBRow>
+        </MDBRow>
         )
     }
 };
