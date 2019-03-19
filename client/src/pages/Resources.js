@@ -14,8 +14,8 @@ function Resources() {
             </Header>
             
             <section className="my-5">
-            <MDBRow>
-                <MDBCol md="4" className="md-0 mb-5">
+            <MDBRow className="cardRow">
+                <MDBCol md="3" className="resourceSection1">
                 <MDBRow>
                     <MDBCol lg="2" md="3" size="2">
                     <MDBIcon icon="universal-access" size="2x" className="cyan-text" />
@@ -32,7 +32,7 @@ function Resources() {
                     </MDBCol>
                 </MDBRow>
                 </MDBCol>
-                <MDBCol md="4" className="md-0 mb-5">
+                <MDBCol md="3" className="resourceSection2">
                 <MDBRow>
                     <MDBCol lg="2" md="3" size="2">
                     <MDBIcon icon="video" size="2x" className="teal-text" />
@@ -49,7 +49,7 @@ function Resources() {
                     </MDBCol>
                 </MDBRow>
                 </MDBCol>
-                <MDBCol md="4" className="md-0 mb-5">
+                <MDBCol md="3" className="resourceSection3">
                 <MDBRow>
                     <MDBCol lg="2" md="3" size="2">
                     <MDBIcon icon="cogs" size="2x" className="mdb-color-text" />

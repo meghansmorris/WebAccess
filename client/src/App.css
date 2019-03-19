@@ -13,3 +13,36 @@ body {
 .cardButton {
     background-color: #203e95 !important;
 }
+
+.cardButton:hover {
+    color: white !important;
+    font-style: italic !important;
+}
+
+.resourceSection1 {
+    background: #f7f4f0 !important;
+    margin: 0 15px 0 15px;
+    padding: 20px 0 20px 0;
+    border-radius: 15px;
+
+}
+
+.resourceSection2 {
+    background: #f7f4f0 !important;
+    margin: 0 15px 0 15px;
+    padding: 20px 0 20px 0;
+    border-radius: 15px;
+
+}
+
+.resourceSection3 {
+    background: #f7f4f0 !important;
+    margin: 0 15px 0 10px;
+    padding: 20px 0 20px 0;
+    border-radius: 15px;
+
+}
+
+.cardRow {
+    display: inline-block;
+}
