@@ -10,7 +10,7 @@ function SearchResults() {
         <>
         <MDBContainer fluid>
             <Header>
-                <h1 className="display-3">Web Accessibility Search Results</h1>
+                <h1 className="display-4">Web Accessibility Search Results</h1>
                 <hr className="my-2" />
                 <h2 className="lead">Looking for more? <a href="/resources" alt="view the resources page">Visit the Resources page.</a></h2>
             </Header>
