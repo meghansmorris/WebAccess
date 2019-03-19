@@ -1,19 +1,34 @@
-import React from "react";
-import {  MDBRow, MDBCol, MDBIcon } from "mdbreact";
+import React, { Component } from "react";
+import {  MDBRow, MDBCol, MDBIcon, MDBBtn } from "mdbreact";
 
-function SiteSearch() {
-    return (
-    <MDBRow>
-    <MDBCol md="2"></MDBCol>
-    <MDBCol md="9">
-        <form className="form-inline mt-4 mb-4">
-            <MDBIcon icon="search" size="1x" className="grey-text" alt="search" />
-            <input className="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search the site" aria-label="Search the site" />
-        </form>
-    </MDBCol>
-</MDBRow>
-    )
-  }
+class SiteSearch extends Component {
+
+    componentDidMount() {
+        (function() {
+            var cx = '000810281350211822819:o4tbpnp1jce';
+            var gcse = document.createElement('script');
+            gcse.type = 'text/javascript';
+            gcse.async = true;
+            gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(gcse, s);
+        })()
+        };
+
+    render() {
+        return (
+        <MDBRow>
+            <form className="form-inline gcse-searchbox-only mr-4" data-resultsUrl="https://enablingtheweb.herokuapp.com/searchresults"
+            data-newWindow="true" data-queryParameterName="search" method="get" title="Search Form" action="https://cse.google.com/cse/publicurl">
+                <MDBIcon icon="search" size="1x" className="grey-text mr-2" alt="search" />
+                    <input className="form-control form-control-sm " type="text" id="q" name="q" title="Search" placeholder="Search the site" aria-label="Search the site" alt="Search Text" />
+                    <input type="hidden" id="cx" name="cx" value="000810281350211822819:o4tbpnp1jce" />
+            </form>
+        </MDBRow>
+        )
+    }
+};
 
 
 export default SiteSearch;
+

@@ -6,9 +6,9 @@ const Footer = () => {
     <MDBFooter color="blue-grey darken-4" className="font-small pt-4 mt-4">
       <MDBContainer fluid className="text-center text-md-left">
         <MDBRow>
-          <MDBCol md="6">
+          <MDBCol className="pr-4" md="6">
             <h5 className="title">Enabling the Web</h5>
-            <p>
+            <p className="pl-4">
               We are two web developers learning React and realized that programming applications
               for better web accessibility required reading large amounts of information. We developed
               Enabling the Web to be an easy-to-use tool to help other web developers create applications 

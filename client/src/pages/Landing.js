@@ -57,12 +57,7 @@ function Landing() {
                     </MDBTooltip> 
                 </MDBCol>
             </MDBRow>
-            <MDBRow>
-                <MDBCol md="1"></MDBCol>
-                <MDBCol md="9" className="ml-3">
-                    <SiteSearch />
-                </MDBCol>
-            </MDBRow>
+
         </MDBContainer>
         </>
     );
