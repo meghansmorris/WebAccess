@@ -55,7 +55,7 @@ function Questions(props) {
         <MDBRow>
             <MDBCol size="5"></MDBCol>
             <MDBCol size="3">
-                <MDBBtn color="mdb-color" onClick={()=>props.nextSlide()}>Next</MDBBtn>
+                <button className="quizBtn btn" onClick={()=>props.nextSlide()}>Next</button>
             </MDBCol>
         </MDBRow>
         </>

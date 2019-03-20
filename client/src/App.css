@@ -13,3 +13,132 @@ body {
 .cardButton {
     background-color: #203e95 !important;
 }
+
+.cardButton:hover {
+    color: white !important;
+    font-style: italic !important;
+}
+
+/* Landing page styling */
+.mission-head {
+    text-align: center;
+    padding-left: 60px;
+    padding-bottom: 20px;
+    color: #004d40 !important;
+}
+.mission-desc {
+    background: #f7f4f0 !important;
+    border-radius: 15px;
+    padding: 20px 20px 30px 20px; 
+    margin-bottom: 10px;
+    width: 85%;
+    line-height: 1.5em;
+    align-content: center;
+    align-self: center;
+}
+
+.principleSection {
+    background: #f7f4f0 !important;
+    margin: 0;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.principle-head {
+    padding-left: 35px;
+    padding-bottom: 10px;
+}
+
+.principles-btn, .flashcards-btn, .quiz-btn, .conversation-btn {
+    background-color: #203e95 !important;
+}
+
+.conversation-btn:hover {
+    color: white !important;
+    font-style: italic !important;
+}
+.principles-btn:hover {
+    color: white !important;
+    font-style: italic !important;
+}
+.flashcards-btn:hover {
+    color: white !important;
+    font-style: italic !important;
+}
+.quiz-btn:hover {
+    color: white !important;
+    font-style: italic !important;
+}
+
+.card-row {
+    margin-top: 30px;
+}
+
+/* Resources page styling */
+.resourceSection1 {
+    background: #f7f4f0 !important;
+    margin: 0 15px 0 15px;
+    padding: 40px 15px 20px 0;
+    border-radius: 15px;
+    height: 325px;
+}
+
+.univ-icon {
+    color: #916637 !important;
+}
+
+.univ-button {
+    background-color: #916637 !important;
+}
+
+.univ-button:hover {
+    color: white !important;
+    font-style: italic !important; 
+}
+
+.resourceSection2 {
+    background: #f7f4f0 !important;
+    margin: 0 15px 0 15px;
+    padding: 20px 15px 20px 0;
+    border-radius: 15px;
+    height: 325px;
+}
+
+.video-icon {
+    color: #004d40 !important;
+}
+
+.video-button {
+    background-color: #004d40 !important;
+}
+
+.video-button:hover {
+    color: white !important;
+    font-style: italic !important; 
+}
+
+.resourceSection3 {
+    background: #f7f4f0 !important;
+    margin: 0 15px 0 10px;
+    padding: 50px 15px 20px 0;
+    border-radius: 15px;
+    height: 325px;
+}
+
+.cogs-icon {
+    color: #203e95 !important;
+}
+
+.cogs-button {
+    background-color: #203e95 !important;
+}
+
+.cogs-button:hover {
+    color: white !important;
+    font-style: italic !important; 
+}
+
+.cardRow {
+    display: inline-block;
+    align-items: center;
+}

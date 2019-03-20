@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Input, TextArea, FormBtn} from "../Form/Form";
 import { MDBBtn, MDBModal, MDBModalBody, MDBModalHeader, MDBRow, MDBCol } from 'mdbreact';
 import API from "../../utils/API";
+import "./modal.css";
 
 class NewPost extends Component {
 
@@ -55,7 +56,7 @@ class NewPost extends Component {
   render () {
     return (
       <>
-      <MDBBtn color="blue-grey" onClick={this.toggle}>Add a New Post</MDBBtn>
+      <button className="newPostBtn btn" onClick={this.toggle}>Add a New Post</button>
       <MDBModal isOpen={this.state.modal} toggle={this.toggle}>
         <MDBModalHeader toggle={this.toggle}>Write Your Post</MDBModalHeader>
         <MDBModalBody>

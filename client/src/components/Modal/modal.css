@@ -1,0 +1,8 @@
+.newPostBtn {
+    background-color: #203e95 !important;
+}
+
+.newPostBtn:hover {
+    color: white !important;
+    font-style: italic !important;
+}
