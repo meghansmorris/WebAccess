@@ -1,5 +1,5 @@
 import React from "react";
-import { MDBCard, MDBCardTitle, MDBCardBody, MDBCol, MDBRow, MDBBtn } from 'mdbreact';
+import { MDBCard, MDBCardTitle, MDBCardBody, MDBCol, MDBRow } from 'mdbreact';
 import "./quiz.css"
 
 function Questions(props) {

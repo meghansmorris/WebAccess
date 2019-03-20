@@ -1,5 +1,5 @@
 import React from "react";
-import { MDBCard, MDBCardBody, MDBCardTitle, MDBCardText, MDBBtn } from 'mdbreact';
+import { MDBCard, MDBCardBody, MDBCardTitle, MDBCardText } from 'mdbreact';
 
 function CardBack(props) {
 

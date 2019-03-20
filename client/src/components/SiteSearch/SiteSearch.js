@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import {  MDBRow, MDBCol, MDBIcon, MDBBtn } from "mdbreact";
+import {  MDBRow, MDBIcon } from "mdbreact";
 
 class SiteSearch extends Component {
 

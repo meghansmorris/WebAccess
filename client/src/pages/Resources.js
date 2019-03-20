@@ -1,7 +1,6 @@
 import React from "react";
 import Header from "../components/Header/Header";
-import SiteSearch from "../components/SiteSearch/SiteSearch";
-import { MDBContainer, MDBRow, MDBCol, MDBIcon, MDBBtn } from "mdbreact";
+import { MDBContainer, MDBRow, MDBCol, MDBIcon } from "mdbreact";
 
 function Resources() {
     return (

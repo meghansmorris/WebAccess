@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Input, TextArea, FormBtn} from "../Form/Form";
-import { MDBBtn, MDBModal, MDBModalBody, MDBModalHeader, MDBRow, MDBCol } from 'mdbreact';
+import { MDBModal, MDBModalBody, MDBModalHeader, MDBRow, MDBCol } from 'mdbreact';
 import API from "../../utils/API";
 import "./modal.css";
 

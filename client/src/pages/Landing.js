@@ -38,7 +38,7 @@ function Landing() {
                 <MDBCol md="6" xl="5" className="mb-4">
                     <MDBView className="overlay rounded z-depth-2" waves>
                     <img src={code}
-                        alt="code image"
+                        alt="code"
                         className="img-fluid principles"
                     />
                     <a href="#!">
