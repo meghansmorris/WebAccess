@@ -81,6 +81,7 @@ body {
     padding: 40px 15px 20px 0;
     border-radius: 15px;
     height: 325px;
+    width: 375px;
 }
 
 .univ-icon {
@@ -102,6 +103,7 @@ body {
     padding: 20px 15px 20px 0;
     border-radius: 15px;
     height: 325px;
+    width: 375px;
 }
 
 .video-icon {
@@ -123,6 +125,7 @@ body {
     padding: 50px 15px 20px 0;
     border-radius: 15px;
     height: 325px;
+    width: 375px;
 }
 
 .cogs-icon {

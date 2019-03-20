@@ -12,7 +12,6 @@ function Resources() {
                 <h2 className="lead">Looking for more? Here are a few helpful resources to continue building enabled web applications.</h2>
             </Header>
             
-            <section className="my-5">
             <MDBRow className="cardRow justify-content-center">
                 <MDBCol md="3" className="resourceSection1">
                 <MDBRow>
@@ -66,7 +65,6 @@ function Resources() {
                 </MDBRow>
                 </MDBCol>
             </MDBRow>
-            </section>
 
         </MDBContainer>
         </>
