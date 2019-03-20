@@ -77,19 +77,20 @@ body {
 /* Resources page styling */
 .resourceSection1 {
     background: #f7f4f0 !important;
-    margin: 0 15px 0 15px;
-    padding: 40px 15px 20px 0;
+    margin: 10px 20px 10px 20px;
+    padding: 20px;
     border-radius: 15px;
-    height: 325px;
-    width: 375px;
+
 }
 
 .univ-icon {
     color: #916637 !important;
+
 }
 
 .univ-button {
     background-color: #916637 !important;
+    margin-top: 10px;
 }
 
 .univ-button:hover {
@@ -99,19 +100,20 @@ body {
 
 .resourceSection2 {
     background: #f7f4f0 !important;
-    margin: 0 15px 0 15px;
-    padding: 20px 15px 20px 0;
+    margin: 10px 20px 10px 20px;
+    padding: 20px;
     border-radius: 15px;
-    height: 325px;
-    width: 375px;
 }
 
 .video-icon {
     color: #004d40 !important;
+
 }
 
 .video-button {
     background-color: #004d40 !important;
+    margin-top: 10px;
+
 }
 
 .video-button:hover {
@@ -121,11 +123,9 @@ body {
 
 .resourceSection3 {
     background: #f7f4f0 !important;
-    margin: 0 15px 0 10px;
-    padding: 50px 15px 20px 0;
     border-radius: 15px;
-    height: 325px;
-    width: 375px;
+    margin: 10px 20px 10px 20px;
+    padding: 20px;
 }
 
 .cogs-icon {
@@ -134,6 +134,8 @@ body {
 
 .cogs-button {
     background-color: #203e95 !important;
+    margin-top: 10px;
+
 }
 
 .cogs-button:hover {
