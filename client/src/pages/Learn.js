@@ -64,7 +64,9 @@ class Learn extends Component {
             </Header>
             <MDBRow>
                 <MDBCol md="3">
-                    <Categories handleCategory={this.handleCategory}/>
+                    <Categories 
+                    handleCategory={this.handleCategory}
+                    selectedCategory={this.state.selectedCategory}/>
                 </MDBCol>
                 <MDBCol md="9">
                 <Carousel filteredCards={this.state.filteredCards}></Carousel>
