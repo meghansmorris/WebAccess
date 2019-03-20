@@ -11,11 +11,11 @@ function Resources() {
                 <hr className="my-2" />
                 <h2 className="lead">Looking for more? Here are a few helpful resources to continue building enabled web applications.</h2>
             </Header>
-            
-            <MDBRow className="cardRow justify-content-center">
+           <section>
+           <MDBRow className="cardRow justify-content-center">
                 <MDBCol md="3" className="resourceSection1">
                 <MDBRow>
-                    <MDBCol lg="2" md="3" size="2">
+                    <MDBCol className="justify-content-left" lg="2" md="3" size="2">
                     <MDBIcon icon="universal-access" size="2x" className="univ-icon" />
                     </MDBCol>
                     <MDBCol lg="10" md="9" size="10">
@@ -65,6 +65,8 @@ function Resources() {
                 </MDBRow>
                 </MDBCol>
             </MDBRow>
+            </section> 
+
 
         </MDBContainer>
         </>
