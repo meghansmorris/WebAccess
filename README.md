@@ -1,4 +1,4 @@
-# WebAccess
+# Enabling the Web
 
 We developed this application to provide developers with a learning portal to familiarize themselves with web accessibility standards. There is a lot of content on the web, but it requires reading through a number of resources and it's time consuming. We wanted to make it easier to learn the important aspects of accessibility using flashcards, quizzes and easy-to-use resources. 
 
