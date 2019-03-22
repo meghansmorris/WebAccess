@@ -5,3 +5,7 @@ We developed this application to provide developers with a learning portal to fa
 Our application was developed using React, a MongoDb database, Underscore, MDB React styling, Axios, NodeJS, Express server, and MomentJS-React. We also added some high level Jest and Enzyme testing.
 
 To view our live application, visit: https://enablingtheweb.herokuapp.com/.
+
+To learn more about us, visit our portfolio pages: 
+Meghan Morris - www.meghansmorris.com
+Stephanie Manhart - https://smanhart.github.io/Portfolio/
