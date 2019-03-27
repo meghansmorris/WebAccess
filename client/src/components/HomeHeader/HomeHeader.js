@@ -1,12 +1,12 @@
 import React from "react";
-import {  MDBRow, MDBView, MDBMask, MDBCol, MDBCard, MDBCardBody, MDBContainer } from "mdbreact";
+import {  MDBRow, MDBView, MDBMask, MDBCol } from "mdbreact";
 import hands from "./team-3373638_1920.jpg";
 import "./headstyle.css";
 
 const HomeHeader = () => {
   return (
    <> 
-      <MDBRow className="pb-5 d-flex mx-auto">
+      <MDBRow className="d-flex flex-center">
         <MDBCol md="12" className="flex-center">
         <MDBView>
           <img 
@@ -18,10 +18,10 @@ const HomeHeader = () => {
               <MDBRow className="">
                 <MDBCol md="2" sm="2" xl="2"></MDBCol>
                 <MDBCol md="8" sm="6" xl="8">
-                  <h1 className="display-2 h1-responsive white-text text-center mb-4 font-weight-bold">
+                  <h1 className="h1-responsive white-text text-center font-weight-bold">
                     <strong>Welcome to Enabling the Web</strong>
                   </h1>
-                  <h2 className="h3-responsive white-text text-center pb-5">
+                  <h2 className="h3-responsive white-text text-center pb-2">
                     As developers we all want to create web applications that are intuitive and provide value to our users. Let's work together to make sure EVERYONE can use our sites. 
                   </h2>
                 </MDBCol>
