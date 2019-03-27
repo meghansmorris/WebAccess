@@ -15,9 +15,8 @@ function Landing() {
             <section className="text-justify my-5">
                 <div className=" mx-auto mission-desc">
                 <MDBRow>
-                    <MDBCol md="3"></MDBCol>
-                    <MDBCol md="5">
-                        <h2 className=" mission-head font-weight-bold">
+                    <MDBCol sm="7" md="12">
+                        <h2 className=" h2-responsive justify-content-center mission-head font-weight-bold">
                         Our Mission
                         </h2>
                     </MDBCol>

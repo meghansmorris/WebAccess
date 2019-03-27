@@ -91,7 +91,7 @@ class TakeQuiz extends React.Component {
             <Header>
                 <h1 className="display-4">Quiz Your Web Accessibility Knowledge</h1>
                 <hr className="my-2" />
-                <h2 className="lead">How much you know and what areas you can improve in?</h2>
+                <h2 className="lead">Test how much you know and where you can improve your knowledge.</h2>
             </Header>
             <MDBRow>
                 <MDBCol md="3">
